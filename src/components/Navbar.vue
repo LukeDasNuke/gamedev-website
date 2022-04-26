@@ -1,6 +1,7 @@
 <script setup>
 function toggleNavbar() {
     document.getElementById("hamburger").classList.toggle("open");
+    document.getElementById("hamburger-container").classList.toggle("open");
     document.getElementById("navbar-mobile").classList.toggle("open");
 }
 </script>
@@ -17,7 +18,7 @@ function toggleNavbar() {
                 <li><a href="#">Contact</a></li>
             </ul>
 
-            <div class="hamburger-container">
+            <div id="hamburger-container">
                 <div id="hamburger" v-on:click="toggleNavbar">
                     <span />
                     <span />
@@ -40,8 +41,6 @@ function toggleNavbar() {
 
 <style scoped lang="scss">
 $nav-bg-color: #111111;
-$fonts: inter, arial, sans-serif;
-
 $font-color: #ffffff;
 $secondary-font-color: #dddddd;
 
@@ -69,11 +68,15 @@ $secondary-font-color: #dddddd;
     height: 50px;
     color: $secondary-font-color;
 
-    box-shadow: 0 0 10px #000000;
+    position: relative;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 
     #navbar-mobile {
+        z-index: 98;
+
         background-color: $nav-bg-color;
-        position: absolute;
+        position: fixed;
 
         top: 0;
         left: 0;
@@ -101,6 +104,7 @@ $secondary-font-color: #dddddd;
             &.open {
                 width: 100vw;
                 list-style-type: none;
+                overflow-y: hidden;
 
                 ul {
                     margin-left: 0;
@@ -187,7 +191,7 @@ $secondary-font-color: #dddddd;
         margin-right: 3rem;
     }
 
-    .hamburger-container {
+    #hamburger-container {
         display: none;
         justify-content: end;
         flex: 1;
@@ -196,9 +200,17 @@ $secondary-font-color: #dddddd;
 
         @include md-down {
             display: flex;
+
+            &.open{
+                position: fixed;
+                top: 12.5px;
+                right: 32px;
+                overflow-y: hidden;
+            }
         }
 
         #hamburger {
+
             width: 30px;
             height: 26.25px;
             position: relative;
