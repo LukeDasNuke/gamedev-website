@@ -12,7 +12,7 @@ const props = defineProps({
         type: String,
         default: "firewatch.webp"
     }
-})
+});
 </script>
 
 <template>
@@ -23,16 +23,16 @@ const props = defineProps({
         <p>{{props.subtitle}}</p>
     </div>
 </div>
-
 </template>
 
 <style scoped lang="scss">
-
 .card-container{
     height: 100vh;
     box-sizing: border-box;
 
     .card{
+        scroll-snap-align: center;
+
         border-radius: 12px;
 
         width: 25vw;

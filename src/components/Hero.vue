@@ -1,11 +1,26 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+    title: {
+        type: String,
+        default: "Title"
+    },
+    subtitle: {
+        type: String,
+        default: "Subtitle"
+    },
+    image: {
+        type: String,
+        default: "hero.webp"
+    }
+});
+</script>
 
 <template>
     <div class="hero">
-        <img src="../assets/hero.webp" alt="Hero" />
+        <img :src="'src/assets/' + props.image" alt="Hero" />
         <div class="hero-content">
-            <h1 class="hero-title">Gamedev</h1>
-            <p class="hero-subtitle">Gamedev is so gamedev, its crazy really</p>
+            <h1 class="hero-title">{{props.title}}</h1>
+            <p class="hero-subtitle">{{props.subtitle}}</p>
         </div>
     </div>
 </template>

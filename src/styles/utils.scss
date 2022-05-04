@@ -21,3 +21,9 @@
         @content;
     }
 }
+
+@mixin sm-down {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
