@@ -1,20 +1,20 @@
-<script>
-
-</script>
+<script></script>
 
 <template>
-  <router-view></router-view>
+    <router-view></router-view>
 </template>
 
 <style lang="scss">
-:root{
-     --ti-cursor-color: #efefef;
+:root {
+    --ti-cursor-color: #efefef;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
 
+html {
     scroll-snap-type: y mandatory;
 }
 
@@ -22,8 +22,8 @@ body {
     background-color: $bg-color;
 }
 
-#app{
-  font-family: $main-fonts;
-  color: $font-color;
+#app {
+    font-family: $main-fonts;
+    color: $font-color;
 }
 </style>

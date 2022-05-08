@@ -2,35 +2,35 @@
 const props = defineProps({
     title: {
         type: String,
-        default: "Title"
+        default: "Title",
     },
     subtitle: {
         type: String,
-        default: "Subtitle"
+        default: "Subtitle",
     },
     image: {
         type: String,
-        default: "firewatch.webp"
-    }
+        default: "firewatch.webp",
+    },
 });
 </script>
 
 <template>
-<div class="card-container">
-    <div class="snappy-section card">
-        <img :src="'src/assets/' + props.image" />
-        <h2>{{props.title}}</h2>
-        <p>{{props.subtitle}}</p>
+    <div class="card-container">
+        <div class="snappy-section card">
+            <img :src="'src/assets/' + props.image" />
+            <h2>{{ props.title }}</h2>
+            <p>{{ props.subtitle }}</p>
+        </div>
     </div>
-</div>
 </template>
 
 <style scoped lang="scss">
-.card-container{
+.card-container {
     height: 100vh;
     box-sizing: border-box;
 
-    .card{
+    .card {
         scroll-snap-align: center;
 
         border-radius: 12px;
@@ -40,14 +40,14 @@ const props = defineProps({
         background-color: $alt-bg-color;
 
         word-wrap: break-word;
-        
-        img{
+
+        img {
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
             width: 100%;
         }
 
-        h2{
+        h2 {
             padding: 8px 20px;
         }
 
@@ -56,7 +56,7 @@ const props = defineProps({
             padding-top: 0;
         }
 
-        @include lg-down{
+        @include lg-down {
             width: 70vw;
         }
     }

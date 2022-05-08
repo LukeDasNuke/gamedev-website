@@ -2,16 +2,16 @@
 const props = defineProps({
     title: {
         type: String,
-        default: "Title"
+        default: "Title",
     },
     subtitle: {
         type: String,
-        default: "Subtitle"
+        default: "Subtitle",
     },
     image: {
         type: String,
-        default: "hero.webp"
-    }
+        default: "hero.webp",
+    },
 });
 </script>
 
@@ -19,8 +19,8 @@ const props = defineProps({
     <div class="hero">
         <img :src="'src/assets/' + props.image" alt="Hero" />
         <div class="hero-content">
-            <h1 class="hero-title">{{props.title}}</h1>
-            <p class="hero-subtitle">{{props.subtitle}}</p>
+            <h1 class="hero-title">{{ props.title }}</h1>
+            <p class="hero-subtitle">{{ props.subtitle }}</p>
         </div>
     </div>
 </template>
@@ -29,6 +29,8 @@ const props = defineProps({
 .hero {
     padding: 0;
     margin: 0;
+
+    max-width: 100%;
 
     width: 100vw;
     height: calc(100vh - 50px);
