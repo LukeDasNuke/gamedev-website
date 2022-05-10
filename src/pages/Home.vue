@@ -66,7 +66,7 @@ onMounted(() => {
 
     <section class="snappy-section third-section">
         <h2 id="cta"></h2>
-        <a class="button" href="#">Take the test</a>
+        <router-link class="button" :to="{name: 'the-test'}">Take the test</router-link>
     </section>
 
     <Footer class="snappy-section-end" />
