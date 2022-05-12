@@ -111,7 +111,7 @@ function evaluate() {
             </div>
 
             <span class="button" v-on:click="evaluate">Evaluate</span>
-            <p>The almighty recommends: {{result}}</p>
+            <p>The almighty god recommends: {{result}}</p>
         </div>
         <div class="evaluation-section">
             <img src="../assets/hero.webp">
