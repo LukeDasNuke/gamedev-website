@@ -17,7 +17,7 @@ const props = defineProps({
 
 <template>
     <div class="hero">
-        <img :src="'./src/assets/' + props.image" alt="Hero" />
+        <img :src="props.image" alt="Hero" />
         <div class="hero-content">
             <h1 class="hero-title">{{ props.title }}</h1>
             <p class="hero-subtitle">{{ props.subtitle }}</p>
