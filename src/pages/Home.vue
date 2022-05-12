@@ -36,8 +36,8 @@ onMounted(() => {
         <div class="text-image-right">
             <div class="text">
                 <p>
-                    Gamedev is quite a serious piece of gamedev, although the other part of gamedev is actually something called gamedev. It's quite simple really, since both of these are called
-                    gamedev although they are quite different gamedev. Ever considered gamedev?
+                    Gamedev is hard, but one of the hardest part is to actually choose what tools you want to use to develop your game. That's why this website exists! Take the test and find out what
+                    tools you should use to develop your game!
                 </p>
             </div>
             <div class="image" id="sussybaka">
@@ -48,19 +48,19 @@ onMounted(() => {
 
     <section class="second-section">
         <Card
-            id = "0"
+            id="0"
             title="Game engines"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-1.webp"
         />
         <Card
-            id = "1"
+            id="1"
             title="Game frameworks"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-2.webp"
         />
         <Card
-            id = "2"
+            id="2"
             title="Build from scratch"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-3.webp"
@@ -69,7 +69,7 @@ onMounted(() => {
 
     <section class="snappy-section third-section">
         <h2 id="cta"></h2>
-        <router-link class="button" :to="{name: 'the-test'}">Take the test</router-link>
+        <router-link class="button" :to="{ name: 'the-test' }">Take the test</router-link>
     </section>
 
     <Footer class="snappy-section-end" />
