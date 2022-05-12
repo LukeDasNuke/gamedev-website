@@ -48,16 +48,19 @@ onMounted(() => {
 
     <section class="second-section">
         <Card
+            id = "0"
             title="Game engines"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-1.webp"
         />
         <Card
+            id = "1"
             title="Game frameworks"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-2.webp"
         />
         <Card
+            id = "2"
             title="Build from scratch"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-3.webp"

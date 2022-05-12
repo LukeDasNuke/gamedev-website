@@ -1,4 +1,12 @@
 <script setup>
+import image1 from '../assets/firewatch-1.webp';
+import image2 from '../assets/firewatch-2.webp';
+import image3 from '../assets/firewatch-3.webp';
+
+import { onMounted, ref } from 'vue';
+
+let usedImage = ref(image1);
+
 const props = defineProps({
     title: {
         type: String,
@@ -12,13 +20,27 @@ const props = defineProps({
         type: String,
         default: "firewatch.webp",
     },
+    id: {
+        type: String,
+        default: "0",
+    }
+});
+
+onMounted(()=>{
+    if(props.id == "0"){
+        usedImage.value = image1;
+    }else if(props.id == "1"){
+        usedImage.value = image2;
+    }else if(props.id == "2"){
+        usedImage.value = image3;
+    }
 });
 </script>
 
 <template>
     <div class="card-container">
         <div class="snappy-section card">
-            <img :src="'./assets/' + props.image" />
+            <img :src="usedImage" />
             <h2>{{ props.title }}</h2>
             <p>{{ props.subtitle }}</p>
         </div>
