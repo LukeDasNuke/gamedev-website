@@ -69,54 +69,90 @@ function evaluate() {
     </section>
 
     <section class="snappy-section first-section">
-        <h2>Here are the questions (scari):</h2>
+        <div class="question-section">
+            <h2>Here are the questions (scari):</h2>
 
-        <div class="question" id="q0">
-            <p class="question-text">Is this your first game?</p>
-            <span class="button" v-on:click="answer(0, 0, ['simple_game_engine', 'unreal', 'cpp'], [2, -2, -2])">Yes</span>
-            <span class="button" v-on:click="answer(0, 1, ['simple_game_engine'], [-1])">No</span>
+            <div class="question" id="q0">
+                <p class="question-text">Is this your first game?</p>
+                <span class="button" v-on:click="answer(0, 0, ['simple_game_engine', 'unreal', 'cpp'], [2, -2, -2])">Yes</span>
+                <span class="button" v-on:click="answer(0, 1, ['simple_game_engine'], [-1])">No</span>
+            </div>
+
+            <div class="question" id="q1">
+                <p class="question-text">Is your game going to be 2d or 3d?</p>
+                <span class="button" v-on:click="answer(1, 0, ['unreal'], [-5])">2D</span>
+                <span class="button" v-on:click="answer(1, 1, ['unity', 'unreal'], [1, 1])">3D</span>
+            </div>
+
+            <div class="question" id="q2">
+                <p class="question-text">Is your game going to require photorealistic graphics?</p>
+                <span class="button" v-on:click="answer(2, 0, ['unreal', 'unity', 'simple_game_engine', 'python', 'cpp'], [5, 2, -4, -6, -1])">Yes</span>
+                <span class="button" v-on:click="answer(2, 1, ['unreal'], [-2])">No</span>
+            </div>
+
+            <div class="question" id="q3">
+                <p class="question-text">Are you experienced with programming?</p>
+                <span class="button" v-on:click="answer(3, 0, ['cpp', 'unity', 'unreal', 'cs_framework', 'simple_game_engine'], [1, 1, 1, 1, -1])">Yes</span>
+                <span class="button" v-on:click="answer(3, 1, ['unity', 'unreal', 'python', 'cs_framework'], [1, 1, 1, 1])">Kind of</span>
+                <span class="button" v-on:click="answer(3, 2, ['cpp', 'simple_game_engine'], [-5, 2])">Nope</span>
+            </div>
+
+            <div class="question" id="q4">
+                <p class="question-text">Is the scope of your game big?</p>
+                <span class="button" v-on:click="answer(4, 0, ['unreal', 'unity'], [2, 2])">Yes</span>
+                <span class="button" v-on:click="answer(4, 1, ['simple_game_engine', 'python', 'cs_framework'], [2, 2, 2])">No</span>
+            </div>
+
+            <div class="question" id="q5">
+                <p class="question-text">Do you want an editor?</p>
+                <span class="button" v-on:click="answer(5, 0, ['unreal', 'unity', 'simple_game_engine'], [4, 4, 4])">Yes</span>
+                <span class="button" v-on:click="answer(5, 1, [], [])">I don't care</span>
+                <span class="button" v-on:click="answer(5, 2, ['unreal', 'unity', 'simple_game_engine', 'cs_framework'], [-6, -6, -6, 3])">No</span>
+            </div>
+
+            <span class="button" v-on:click="evaluate">Evaluate</span>
+            <p>The almighty recommends: {{result}}</p>
         </div>
-
-        <div class="question" id="q1">
-            <p class="question-text">Is your game going to be 2d or 3d?</p>
-            <span class="button" v-on:click="answer(1, 0, ['unreal'], [-5])">2D</span>
-            <span class="button" v-on:click="answer(1, 1, ['unity', 'unreal'], [1, 1])">3D</span>
+        <div class="evaluation-section">
+            <img src="../assets/hero.webp">
+            <p>Your best option is this blablbalblabla</p>
         </div>
-
-        <div class="question" id="q2">
-            <p class="question-text">Is your game going to require photorealistic graphics?</p>
-            <span class="button" v-on:click="answer(2, 0, ['unreal', 'unity', 'simple_game_engine', 'python', 'cpp'], [5, 2, -4, -6, -1])">Yes</span>
-            <span class="button" v-on:click="answer(2, 1, ['unreal'], [-2])">No</span>
-        </div>
-
-        <div class="question" id="q3">
-            <p class="question-text">Are you experienced with programming?</p>
-            <span class="button" v-on:click="answer(3, 0, ['cpp', 'unity', 'unreal', 'cs_framework', 'simple_game_engine'], [1, 1, 1, 1, -1])">Yes</span>
-            <span class="button" v-on:click="answer(3, 1, ['unity', 'unreal', 'python', 'cs_framework'], [1, 1, 1, 1])">Kind of</span>
-            <span class="button" v-on:click="answer(3, 2, ['cpp', 'simple_game_engine'], [-5, 2])">Nope</span>
-        </div>
-
-        <div class="question" id="q4">
-            <p class="question-text">Is the scope of your game big?</p>
-            <span class="button" v-on:click="answer(4, 0, ['unreal', 'unity'], [2, 2])">Yes</span>
-            <span class="button" v-on:click="answer(4, 1, ['simple_game_engine', 'python', 'cs_framework'], [2, 2, 2])">No</span>
-        </div>
-
-        <div class="question" id="q5">
-            <p class="question-text">Do you want an editor?</p>
-            <span class="button" v-on:click="answer(5, 0, ['unreal', 'unity', 'simple_game_engine'], [4, 4, 4])">Yes</span>
-            <span class="button" v-on:click="answer(5, 1, [], [])">I don't care</span>
-            <span class="button" v-on:click="answer(5, 2, ['unreal', 'unity', 'simple_game_engine', 'cs_framework'], [-6, -6, -6, 3])">No</span>
-        </div>
-
-        <span class="button" v-on:click="evaluate">Evaluate</span>
-        <p>The almighty recommends: {{result}}</p>
     </section>
 
     <Footer class="snappy-section-end" />
 </template>
 
 <style lang="scss" scoped>
+.question-section{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.evaluation-section{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    img{
+        width: 50vw;
+        border-radius: 0.5rem;
+    }
+}
+
+.first-section {
+    padding-top: 32px;
+    padding-bottom: 50px;
+    display: flex;
+    
+    @include lg-down{
+        flex-direction: column;
+
+        .evaluation-section{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
 .question {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -125,6 +161,7 @@ function evaluate() {
 .button {
     display: inline-block;
     margin: 0 auto;
+    margin-right: 1rem;
     padding: 8px 10px;
     border-radius: 12px;
     background-color: $alt-bg-color;
@@ -148,11 +185,6 @@ function evaluate() {
     .nav-section {
         scroll-snap-align: start;
         height: 100vh;
-    }
-
-    .first-section {
-        padding-top: 32px;
-        padding-bottom: 50px;
     }
 
     .snappy-section {
