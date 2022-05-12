@@ -2,8 +2,7 @@
 import Navbar from "../components/Navbar.vue";
 import Hero from "../components/Hero.vue";
 import Footer from "../components/Footer.vue";
-import { onMounted, ref } from "vue";
-import { objectToString } from "@vue/shared";
+import { ref } from "vue";
 
 let options = {
     simple_game_engine: 0,
@@ -11,6 +10,7 @@ let options = {
     unreal: 0,
     cpp: 0,
     python: 0,
+    cs_framework: 0
 };
 
 let option_names = [
@@ -18,10 +18,11 @@ let option_names = [
     "Unity",
     "Unreal Engine",
     "C++",
-    "Python"
+    "Python",
+    "C# framework"
 ]
 
-let result = ref("")
+let result = ref("");
 
 function answer(question_id, answer_id, names, values) {
     let parent = document.getElementById("q" + question_id);
@@ -90,22 +91,22 @@ function evaluate() {
 
         <div class="question" id="q3">
             <p class="question-text">Are you experienced with programming?</p>
-            <span class="button" v-on:click="answer(3, 0, ['cpp', 'unity', 'unreal', 'simple_game_engine'], [1, 1, 1, -1])">Yes</span>
-            <span class="button" v-on:click="answer(3, 1, ['unity', 'unreal', 'python'], [1, 1, 1])">Kind of</span>
+            <span class="button" v-on:click="answer(3, 0, ['cpp', 'unity', 'unreal', 'cs_framework', 'simple_game_engine'], [1, 1, 1, 1, -1])">Yes</span>
+            <span class="button" v-on:click="answer(3, 1, ['unity', 'unreal', 'python', 'cs_framework'], [1, 1, 1, 1])">Kind of</span>
             <span class="button" v-on:click="answer(3, 2, ['cpp', 'simple_game_engine'], [-5, 2])">Nope</span>
         </div>
 
         <div class="question" id="q4">
             <p class="question-text">Is the scope of your game big?</p>
             <span class="button" v-on:click="answer(4, 0, ['unreal', 'unity'], [2, 2])">Yes</span>
-            <span class="button" v-on:click="answer(4, 1, ['simple_game_engine', 'python'], [2, 2])">No</span>
+            <span class="button" v-on:click="answer(4, 1, ['simple_game_engine', 'python', 'cs_framework'], [2, 2, 2])">No</span>
         </div>
 
         <div class="question" id="q5">
             <p class="question-text">Do you want an editor?</p>
             <span class="button" v-on:click="answer(5, 0, ['unreal', 'unity', 'simple_game_engine'], [4, 4, 4])">Yes</span>
             <span class="button" v-on:click="answer(5, 1, [], [])">I don't care</span>
-            <span class="button" v-on:click="answer(5, 2, ['unreal', 'unity', 'simple_game_engine'], [-4, -4, -4])">No</span>
+            <span class="button" v-on:click="answer(5, 2, ['unreal', 'unity', 'simple_game_engine', 'cs_framework'], [-6, -6, -6, 3])">No</span>
         </div>
 
         <span class="button" v-on:click="evaluate">Evaluate</span>
