@@ -18,7 +18,7 @@ const props = defineProps({
 <template>
     <div class="card-container">
         <div class="snappy-section card">
-            <img :src="props.image" />
+            <img :src="'src/assets/' + props.image" />
             <h2>{{ props.title }}</h2>
             <p>{{ props.subtitle }}</p>
         </div>

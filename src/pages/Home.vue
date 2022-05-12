@@ -50,17 +50,17 @@ onMounted(() => {
         <Card
             title="Game engines"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image="../src/assets/firewatch-1.webp"
+            image="firewatch-1.webp"
         />
         <Card
             title="Game frameworks"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image="../src/assets/firewatch-2.webp"
+            image="firewatch-2.webp"
         />
         <Card
             title="Build from scratch"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image="../src/assets/firewatch-3.webp"
+            image="firewatch-3.webp"
         />
     </section>
 
