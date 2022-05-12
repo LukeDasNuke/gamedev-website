@@ -1,4 +1,8 @@
 <script setup>
+import image1 from '../assets/hero.webp';
+import { onMounted, ref } from 'vue';
+let usedImage = ref(image1);
+
 const props = defineProps({
     title: {
         type: String,
@@ -12,12 +16,22 @@ const props = defineProps({
         type: String,
         default: "hero.webp",
     },
+    id: {
+        type: String,
+        default: "0"
+    }
+});
+
+onMounted(()=>{
+    if(props.id == "0"){
+        usedImage.value = image1;
+    }
 });
 </script>
 
 <template>
     <div class="hero">
-        <img :src="props.image" alt="Hero" />
+        <img :src="usedImage" alt="Hero" />
         <div class="hero-content">
             <h1 class="hero-title">{{ props.title }}</h1>
             <p class="hero-subtitle">{{ props.subtitle }}</p>

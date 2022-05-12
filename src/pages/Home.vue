@@ -29,7 +29,7 @@ onMounted(() => {
 <template>
     <section class="snappy-section nav-section">
         <Navbar activeId="0" />
-        <Hero title="Gamedev" subtitle="It's soo gamedev, it's crazy really" image="../src/assets/hero.webp" />
+        <Hero title="Gamedev" subtitle="It's soo gamedev, it's crazy really" image="../src/assets/hero.webp" id="0" />
     </section>
 
     <section class="snappy-section first-section">
