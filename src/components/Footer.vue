@@ -5,11 +5,11 @@
         <h2>Gamedev website</h2>
         <ul>
             <li><router-link :to="{ name: 'home' }" id="nav-0">Home</router-link></li>
-            <span class="divider">|</span>
+            <li><span class="divider">|</span></li>
             <li><router-link :to="{ name: 'the-test' }" id="nav-1">The test</router-link></li>
-            <span class="divider">|</span>
+            <li><span class="divider">|</span></li>
             <li><router-link :to="{ name: '' }" id="nav-2">Why</router-link></li>
-            <span class="divider">|</span>
+            <li><span class="divider">|</span></li>
             <li><router-link :to="{ name: '' }" id="nav-3">Contact</router-link></li>
         </ul>
     </div>

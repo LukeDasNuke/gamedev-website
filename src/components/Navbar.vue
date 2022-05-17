@@ -25,10 +25,10 @@ onMounted(() => {
             <p class="navbar-title">Gamedev</p>
 
             <ul>
-                <li><router-link :to="{ name: 'home' }" id="nav-0">Home</router-link></li>
-                <li><router-link :to="{ name: 'the-test' }" id="nav-1">The test</router-link></li>
-                <li><router-link :to="{ name: '' }" id="nav-2">Why</router-link></li>
-                <li><router-link :to="{ name: '' }" id="nav-3">Contact</router-link></li>
+                <li><router-link :to="{ name: 'home' }">Home</router-link></li>
+                <li><router-link :to="{ name: 'the-test' }">The test</router-link></li>
+                <li><router-link :to="{ name: '' }">Why</router-link></li>
+                <li><router-link :to="{ name: '' }">Contact</router-link></li>
             </ul>
 
             <div id="hamburger-container">
@@ -43,10 +43,10 @@ onMounted(() => {
 
         <div id="navbar-mobile">
             <ul>
-                <li><router-link :to="{ name: 'home' }" id="nav-0">Home</router-link></li>
-                <li><router-link :to="{ name: 'the-test' }" id="nav-1">The test</router-link></li>
-                <li><router-link :to="{ name: '' }" id="nav-2">Why</router-link></li>
-                <li><router-link :to="{ name: '' }" id="nav-3">Contact</router-link></li>
+                <li><router-link :to="{ name: 'home' }">Home</router-link></li>
+                <li><router-link :to="{ name: 'the-test' }">The test</router-link></li>
+                <li><router-link :to="{ name: '' }">Why</router-link></li>
+                <li><router-link :to="{ name: '' }">Contact</router-link></li>
             </ul>
         </div>
     </div>
