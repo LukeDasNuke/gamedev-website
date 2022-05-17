@@ -38,6 +38,10 @@ watch(result, async (newResult) => {
             break;
         case option_names[4]:
             text.value =
+                "Your best bet would be python. It's an easy and very versatile language, perfect for small games!";
+            break;
+        case option_names[5]:
+            text.value =
                 "Your best bet would be a game framework, such as MonoGame, LibGDX or Cocos2Dx! These are all great, battle tested game frameworks that don't require an editor but still simplify the game development process a lot, without the unneccessary bloat of the major game engines.";
             break;
     }
