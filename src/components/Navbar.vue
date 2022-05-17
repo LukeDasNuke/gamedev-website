@@ -1,11 +1,11 @@
 <script setup>
-import {onMounted} from "vue";
+import { onMounted } from "vue";
 
 const props = defineProps({
     activeId: {
         type: String,
-        default: "0"
-    }
+        default: "0",
+    },
 });
 
 function toggleNavbar() {
@@ -14,9 +14,9 @@ function toggleNavbar() {
     document.getElementById("navbar-mobile").classList.toggle("open");
 }
 
-onMounted(()=>{
-    document.getElementById(("nav-"+props.activeId)).classList.add("active");
-})
+onMounted(() => {
+    document.getElementById("nav-" + props.activeId).classList.add("active");
+});
 </script>
 
 <template>
@@ -25,10 +25,10 @@ onMounted(()=>{
             <p class="navbar-title">Gamedev</p>
 
             <ul>
-                <li><router-link :to="{name: 'home'}" id="nav-0">Home</router-link></li>
-                <li><router-link :to="{name: 'the-test'}" id="nav-1">The test</router-link></li>
-                <li><router-link :to="{name: ''}" id="nav-2">Why</router-link></li>
-                <li><router-link :to="{name: ''}" id="nav-3">Contact</router-link></li>
+                <li><router-link :to="{ name: 'home' }" id="nav-0">Home</router-link></li>
+                <li><router-link :to="{ name: 'the-test' }" id="nav-1">The test</router-link></li>
+                <li><router-link :to="{ name: '' }" id="nav-2">Why</router-link></li>
+                <li><router-link :to="{ name: '' }" id="nav-3">Contact</router-link></li>
             </ul>
 
             <div id="hamburger-container">
@@ -43,10 +43,10 @@ onMounted(()=>{
 
         <div id="navbar-mobile">
             <ul>
-                <li><router-link :to="{name: 'home'}" id="nav-0">Home</router-link></li>
-                <li><router-link :to="{name: 'the-test'}" id="nav-1">The test</router-link></li>
-                <li><router-link :to="{name: ''}" id="nav-2">Why</router-link></li>
-                <li><router-link :to="{name: ''}" id="nav-3">Contact</router-link></li>
+                <li><router-link :to="{ name: 'home' }" id="nav-0">Home</router-link></li>
+                <li><router-link :to="{ name: 'the-test' }" id="nav-1">The test</router-link></li>
+                <li><router-link :to="{ name: '' }" id="nav-2">Why</router-link></li>
+                <li><router-link :to="{ name: '' }" id="nav-3">Contact</router-link></li>
             </ul>
         </div>
     </div>
@@ -214,7 +214,7 @@ $secondary-font-color: #dddddd;
         @include md-down {
             display: flex;
 
-            &.open{
+            &.open {
                 position: fixed;
                 top: 12.5px;
                 right: 32px;
@@ -223,7 +223,6 @@ $secondary-font-color: #dddddd;
         }
 
         #hamburger {
-
             width: 30px;
             height: 26.25px;
             position: relative;
