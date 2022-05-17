@@ -31,7 +31,7 @@ onMounted(()=>{
 
 <template>
     <div class="hero">
-        <img :src="usedImage" alt="Hero" />
+        <img :src="usedImage" alt="Hero" title="hollowknightgame.com"/>
         <div class="hero-content">
             <h1 class="hero-title">{{ props.title }}</h1>
             <p class="hero-subtitle">{{ props.subtitle }}</p>

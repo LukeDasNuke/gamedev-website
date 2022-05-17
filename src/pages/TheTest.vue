@@ -131,7 +131,7 @@ function evaluate() {
             <span class="button" v-on:click="evaluate">Evaluate</span>
         </div>
         <div class="evaluation-section">
-            <img src="../assets/hero.webp" />
+            <img src="../assets/hero.webp" title="hollowknightgame.com" alt="image of the tool"/>
             <p>{{ text }}</p>
         </div>
     </section>

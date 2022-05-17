@@ -23,7 +23,11 @@ const props = defineProps({
     id: {
         type: String,
         default: "0",
-    }
+    },
+    title_attrib:{
+        type: String,
+        default: ""
+    }  
 });
 
 onMounted(()=>{
@@ -40,7 +44,7 @@ onMounted(()=>{
 <template>
     <div class="card-container">
         <div class="snappy-section card">
-            <img :src="usedImage" />
+            <img :src="usedImage" :title="props.title_attrib" alt="card image"/>
             <h2>{{ props.title }}</h2>
             <p>{{ props.subtitle }}</p>
         </div>

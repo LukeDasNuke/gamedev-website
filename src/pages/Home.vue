@@ -41,7 +41,7 @@ onMounted(() => {
                 </p>
             </div>
             <div class="image" id="sussybaka">
-                <img src="../assets/hollow-knight-1.webp" />
+                <img src="../assets/hollow-knight-1.webp" alt="hollow knight screenshot"/>
             </div>
         </div>
     </section>
@@ -52,18 +52,21 @@ onMounted(() => {
             title="Game engines"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-1.webp"
+            title_attrib="playvalorant.com"
         />
         <Card
             id="1"
             title="Game frameworks"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-2.webp"
+            title_attrib="firewatchgame.com"
         />
         <Card
             id="2"
             title="Build from scratch"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             image="firewatch-3.webp"
+            title_attrib="firewatchgame.com"
         />
     </section>
 
