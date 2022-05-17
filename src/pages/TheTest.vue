@@ -156,6 +156,10 @@ function evaluate() {
         width: 50vw;
         border-radius: 0.5rem;
     }
+
+    p{
+        width: 50vw;
+    }
 }
 
 .first-section {
