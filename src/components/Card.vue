@@ -1,7 +1,7 @@
 <script setup>
-import image1 from '../assets/firewatch-1.webp';
-import image2 from '../assets/firewatch-2.webp';
-import image3 from '../assets/firewatch-3.webp';
+import image1 from '../assets/valorant-1.webp';
+import image2 from '../assets/firewatch-1.webp';
+import image3 from '../assets/firewatch-2.webp';
 
 import { onMounted, ref } from 'vue';
 

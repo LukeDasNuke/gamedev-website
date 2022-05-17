@@ -41,7 +41,7 @@ onMounted(() => {
                 </p>
             </div>
             <div class="image" id="sussybaka">
-                <img src="../assets/firewatch.webp" />
+                <img src="../assets/hollow-knight-1.webp" />
             </div>
         </div>
     </section>
